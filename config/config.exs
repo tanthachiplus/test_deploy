@@ -6,7 +6,6 @@
 
 # General application configuration
 import Config
-set include_erts: true
 
 config :test_deploy,
   ecto_repos: [TestDeploy.Repo]

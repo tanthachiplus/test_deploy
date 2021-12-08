@@ -12,7 +12,7 @@ defmodule TestDeploy.MixProject do
       aliases: aliases(),
       releases: [
         test_deploy: [
-          include_erts: true,
+          include_erts: false,
           include_executables_for: [:unix],
           applications: [runtime_tools: :permanent]
         ]
