@@ -2,12 +2,16 @@ import Config
 
 # Configure your database
 config :test_deploy, TestDeploy.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "test_deploy_dev",
-  hostname: "localhost",
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+show_sensitive_data_on_connection_error: true,
+pool_size: 10,
+# original Oracle test database
+database: "orcl",
+username: "tse",
+password: "tse",
+hostname: "localhost",
+# default oracle port
+# log: false,
+port: 1521
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
