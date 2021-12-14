@@ -11,6 +11,8 @@ import Config
 # before starting your production server.
 config :test_deploy, TestDeployWeb.Endpoint,
   url: [host: "localhost", port: 4000],
+  load_from_system_env: true,
+  root: ".",
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -49,3 +51,4 @@ config :logger, level: :info
 #       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
+import_config "prod.secret.exs"
